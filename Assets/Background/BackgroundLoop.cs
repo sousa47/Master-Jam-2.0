@@ -14,7 +14,7 @@ public class BackgroundLoop : MonoBehaviour
     void Start() {
         mainCamera = gameObject.GetComponent<Camera>();
         screenBounds = mainCamera.ScreenToWorldPoint(new Vector3(
-            Screen.width,
+            Screen.width * 1.5f,
             Screen.height,
             mainCamera.transform.position.z
         ));
