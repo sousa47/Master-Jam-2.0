@@ -23,7 +23,6 @@ public class LevelGenerator : MonoBehaviour
 
     private void Update()
     {
-        print(playerPosition);
         if(spawnedSections.Last.Value.transform.localPosition.x - playerPosition.position.x < 10f)
         {
             AddNewSection();
