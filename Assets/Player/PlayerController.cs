@@ -31,9 +31,12 @@ public class PlayerController : MonoBehaviour
 
     private Rigidbody2D rb;
 
+    private Animator animator;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
     }
 
     private void Update()
@@ -45,7 +48,8 @@ public class PlayerController : MonoBehaviour
         else if (Input.GetAxisRaw("Horizontal") < 0) directionalInputs = -1;
         else    directionalInputs = 0;
 
-        //if (Input.GetKeyDown(KeyCode.W)) requestDash = true;
+        animator.SetFloat("Horizontal Velocity", Mathf.Abs(rb.velocity.x));
+        animator.SetBool("Is Grounded", isGrounded);
     }
 
     private void FixedUpdate()
