@@ -6,6 +6,9 @@ using Random = UnityEngine.Random;
 
 public class DroneBehaviour : MonoBehaviour, Vision.ITrigger
 {
+
+    public int health = 100;
+
     public Animator animator;
     public Animator bodyAnimator;
     public Vision vision;
@@ -41,6 +44,8 @@ public class DroneBehaviour : MonoBehaviour, Vision.ITrigger
         if(timerToShoot > nextShootTime) 
         {
             Shoot();
+            Invoke("Shoot", 0.2f);
+            Invoke("Shoot", 0.4f);
             RestartShoot();
         }
 
@@ -54,11 +59,24 @@ public class DroneBehaviour : MonoBehaviour, Vision.ITrigger
 
     void Shoot()
     {
-        float angle = Vector2.Angle(this.player.transform.position, this.transform.position);
-        //Debug.Log(angle);
-        Instantiate(bulletPrefab, firePoint.position, Quaternion.Euler(0, 0, angle));//firePoint.rotation);
+        float angle = Vector2.SignedAngle(this.transform.position, this.player.transform.position);
+        Vector2 newPoint = this.player.transform.position - this.transform.position;
+        angle = EulerAngleFrom(newPoint) - 90;
+        Instantiate(bulletPrefab, firePoint.position, Quaternion.Euler(0, 0, angle));
     }
 
+    public void GetHit(int damage)
+    {
+        health -= damage;
+        if(health > 0) 
+        {
+
+        }
+        else 
+        {
+            bodyAnimator.SetTrigger("Die");
+        }
+    }
     void Vision.ITrigger._OnTriggerEnter2D(Collider2D other)
     {
         if(other.tag == "Player") {
@@ -69,5 +87,9 @@ public class DroneBehaviour : MonoBehaviour, Vision.ITrigger
     void Vision.ITrigger._OnTriggerExit2D(Collider2D other)
     {
 
+    }
+
+    static public float EulerAngleFrom(Vector2 vector) {
+        return Mathf.Atan2(vector.y, vector.x) * Mathf.Rad2Deg;
     }
 }

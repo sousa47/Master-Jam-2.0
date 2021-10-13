@@ -8,7 +8,9 @@ public class Vision : MonoBehaviour
     [HideInInspector] public ITrigger iTrigger;
 
     private void OnTriggerEnter2D(Collider2D other) {
-        onSight = true;
+        if(other.tag == "Player") {
+            onSight = true;
+        }
         if(iTrigger != null)
         {
             iTrigger._OnTriggerEnter2D(other);
@@ -16,7 +18,9 @@ public class Vision : MonoBehaviour
     }
 
     private void OnTriggerExit2D(Collider2D other) {
-        onSight = false;
+        if(other.tag == "Player") {
+            onSight = false;
+        }
         if(iTrigger != null)
         {
             iTrigger._OnTriggerExit2D(other);
