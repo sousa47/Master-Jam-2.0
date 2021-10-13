@@ -55,7 +55,7 @@ public class DroneBehaviour : MonoBehaviour, Vision.ITrigger
     void Shoot()
     {
         float angle = Vector2.Angle(this.player.transform.position, this.transform.position);
-        Debug.Log(angle);
+        //Debug.Log(angle);
         Instantiate(bulletPrefab, firePoint.position, Quaternion.Euler(0, 0, angle));//firePoint.rotation);
     }
 

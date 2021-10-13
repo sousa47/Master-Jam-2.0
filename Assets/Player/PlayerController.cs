@@ -49,6 +49,7 @@ public class PlayerController : MonoBehaviour
         else    directionalInputs = 0;
 
         animator.SetFloat("Horizontal Velocity", Mathf.Abs(rb.velocity.x));
+        animator.SetFloat("Vertical Velocity", rb.velocity.y);
         animator.SetBool("Is Grounded", isGrounded);
     }
 

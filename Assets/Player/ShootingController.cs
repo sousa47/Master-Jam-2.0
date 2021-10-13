@@ -40,21 +40,21 @@ public class ShootingController : MonoBehaviour
             {
                 if (verticalDirectionInput > 0)
                 {
-                    shot.GetComponent<Bullet>().movementDirection = Vector2.up;
+                    shot.GetComponent<PlayerBullet>().movementDirection = Vector2.up;
                 }
                 else
                 {
-                    shot.GetComponent<Bullet>().movementDirection = Vector2.down;
+                    shot.GetComponent<PlayerBullet>().movementDirection = Vector2.down;
                     GetComponent<Rigidbody2D>().AddForce(Vector2.up * bulletImpulseForce, ForceMode2D.Impulse);
                 }
 
             }
             else
             {
-                shot.GetComponent<Bullet>().movementDirection = new Vector2(transform.localScale.x, 0);
+                shot.GetComponent<PlayerBullet>().movementDirection = new Vector2(transform.localScale.x, 0);
             }
             
-            Destroy(shot, 10f);
+            Destroy(shot);
         }
     }
 }

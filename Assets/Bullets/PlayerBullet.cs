@@ -2,11 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bullet : MonoBehaviour
+public class PlayerBullet : MonoBehaviour
 {
     public float movementSpeed;
     public Vector2 movementDirection;
     public int damage;
+
+    private void Start()
+    {
+        Destroy(gameObject, 3f);
+    }
 
     private void Update()
     {
@@ -17,6 +22,7 @@ public class Bullet : MonoBehaviour
     {
         if (!collision.CompareTag("Player"))
         {
+            print(collision.name);
             Destroy(gameObject);
         }
     }
