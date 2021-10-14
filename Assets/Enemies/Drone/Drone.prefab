@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 295578165513649309}
   - component: {fileID: 295578165513649306}
   - component: {fileID: 1843141530}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DroneBody
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -319,7 +319,7 @@ GameObject:
   - component: {fileID: 295578166933156354}
   - component: {fileID: 295578166933156357}
   - component: {fileID: 295578166933156355}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Drone
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -354,7 +354,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d020fa05f204e6b468369d4b451c790b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  health: 5
   animator: {fileID: 295578166933156355}
   bodyAnimator: {fileID: 295578165513649309}
   vision: {fileID: 295578166906361767}

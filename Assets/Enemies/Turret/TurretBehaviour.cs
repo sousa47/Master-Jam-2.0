@@ -1,15 +1,11 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Random = UnityEngine.Random;
 
-public class DroneBehaviour : MonoBehaviour, Vision.ITrigger
+public class TurretBehaviour : MonoBehaviour, Vision.ITrigger
 {
+    public int health = 7;
 
-    public int health = 5;
-
-    public Animator animator;
     public Animator bodyAnimator;
     public Vision vision;
     GameObject player;
@@ -85,7 +81,7 @@ public class DroneBehaviour : MonoBehaviour, Vision.ITrigger
     void Vision.ITrigger._OnTriggerEnter2D(Collider2D other)
     {
         if(other.tag == "Player") {
-            animator.SetTrigger("Attention");
+            //animator.SetTrigger("Attention");
         }
     }
 

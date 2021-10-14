@@ -22,23 +22,24 @@ public class PlayerBullet : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        //Debug.Log(collision.gameObject.tag);
-        
         if (collision.gameObject.CompareTag("Ground"))
         {
             bulletBounces--;
-            if (bulletBounces < 0)
-            {
-                Destroy(gameObject);
-            }
         } 
         else if(collision.gameObject.CompareTag("Enemy") ) 
         {
+            bulletBounces--;
+            
             DroneBehaviour droneBehaviour = collision.gameObject.GetComponent<DroneBehaviour>();
             if(droneBehaviour != null) 
             {
                 droneBehaviour.GetHit(damage);
             }
+        }
+
+        if (bulletBounces < 0)
+        {
+            Destroy(gameObject);
         }
 
     }
