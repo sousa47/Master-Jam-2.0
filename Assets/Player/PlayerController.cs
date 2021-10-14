@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] private float moveSpeed;
+    public float moveSpeed;
 
-    [SerializeField] private float jumpForce;
+    public float jumpForce;
     [SerializeField] private float gravityForce;
     [SerializeField] private float fallBonus;
     [SerializeField] private float maxFallSpeed;
