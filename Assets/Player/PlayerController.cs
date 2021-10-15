@@ -58,7 +58,7 @@ public class PlayerController : MonoBehaviour
         float horizontalVelocity = rb.velocity.x;
         float verticalVelocity = rb.velocity.y;
 
-        isGrounded = Physics2D.OverlapArea(bottomLeftCorner.position, bottomRightCorner.position, 1 << LayerMask.NameToLayer("Ground"));
+        isGrounded = Physics2D.OverlapArea(bottomLeftCorner.position, bottomRightCorner.position, 1 << LayerMask.NameToLayer("Ground")) || Physics2D.OverlapArea(bottomLeftCorner.position, bottomRightCorner.position, 1 << LayerMask.NameToLayer("Enemy"));
 
         // accelerate in the desired direction
         if ((directionalInputs > 0 && rb.velocity.x < moveSpeed) || (directionalInputs < 0 && rb.velocity.x > -moveSpeed))

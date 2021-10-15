@@ -46,8 +46,8 @@ public class DroneBehaviour : MonoBehaviour, Vision.ITrigger
         if(timerToShoot > nextShootTime) 
         {
             Shoot();
-            Invoke("Shoot", 0.2f);
-            Invoke("Shoot", 0.4f);
+            Invoke("Shoot", 0.15f);
+            Invoke("Shoot", 0.3f);
             RestartShoot();
         }
 
@@ -82,6 +82,7 @@ public class DroneBehaviour : MonoBehaviour, Vision.ITrigger
             rb.bodyType = RigidbodyType2D.Static;
         }
     }
+
     void Vision.ITrigger._OnTriggerEnter2D(Collider2D other)
     {
         if(other.tag == "Player") {

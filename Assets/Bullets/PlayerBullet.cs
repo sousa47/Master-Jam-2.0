@@ -35,6 +35,11 @@ public class PlayerBullet : MonoBehaviour
             {
                 droneBehaviour.GetHit(damage);
             }
+            TurretBehaviour turretBehaviour = collision.gameObject.GetComponent<TurretBehaviour>();
+            if(turretBehaviour != null) 
+            {
+                turretBehaviour.GetHit(damage);
+            }
         }
 
         if (bulletBounces < 0)
