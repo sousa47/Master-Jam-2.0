@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RobotBehaviour : MonoBehaviour, Vision.ITrigger
+public class FlyingBotBehaviour : MonoBehaviour, Vision.ITrigger
 {
     public int health = 7;
 
@@ -42,7 +42,6 @@ public class RobotBehaviour : MonoBehaviour, Vision.ITrigger
         if(timerToShoot > nextShootTime) 
         {
             Shoot();
-            Invoke("Shoot", 0.4f + Random.Range(0.1f,0.6f));
             RestartShoot();
         }
 
@@ -50,8 +49,7 @@ public class RobotBehaviour : MonoBehaviour, Vision.ITrigger
             (player.transform.position.x > this.transform.position.x && !faceRight) ) 
         {
             faceRight = !faceRight;
-            //bodyAnimator.SetTrigger("Turn");
-            this.transform.Rotate(0f, 180f, 0f);
+            bodyAnimator.SetTrigger("Turn");
         }
     }
 
@@ -76,22 +74,19 @@ public class RobotBehaviour : MonoBehaviour, Vision.ITrigger
         else 
         {
             bodyAnimator.SetTrigger("Die");
-            bodyAnimator.SetBool("Dead", true);
             rb.bodyType = RigidbodyType2D.Static;
         }
     }
     void Vision.ITrigger._OnTriggerEnter2D(Collider2D other)
     {
         if(other.tag == "Player") {
-            bodyAnimator.SetBool("Rest", false);
+            bodyAnimator.SetTrigger("Attention");
         }
     }
 
     void Vision.ITrigger._OnTriggerExit2D(Collider2D other)
     {
-        if(other.tag == "Player") {
-            bodyAnimator.SetBool("Rest", true);
-        }
+
     }
 
     static public float EulerAngleFrom(Vector2 vector) {

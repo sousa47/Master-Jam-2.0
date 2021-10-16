@@ -122,10 +122,16 @@ public class PlayerController : MonoBehaviour
             currentDashTimer -= Time.fixedDeltaTime;
         }
 
-        if (horizontalVelocity != 0)
+        /*if (horizontalVelocity != 0)
         {
             if (horizontalVelocity > 0.001f) transform.localScale = new Vector3(1, 1, 1);
             else if (horizontalVelocity < -0.001f) transform.localScale = new Vector3(-1, 1, 1);
+        }*/
+        //esta alteração corrige o problema da direção do personagem mudar quando leva um hit de uma bullet
+        if (directionalInputs != 0)
+        {
+            if (directionalInputs > 0) transform.localScale = new Vector3(1, 1, 1);
+            else if (directionalInputs < 0) transform.localScale = new Vector3(-1, 1, 1);
         }
     }
 }

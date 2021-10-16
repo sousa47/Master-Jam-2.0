@@ -11,8 +11,9 @@ public class EnemyBullet : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        animator.SetTrigger("Shoot");
         rb.velocity = transform.up * speed;
-        Destroy(gameObject, 3f);
+        Destroy(gameObject, 2.8f);
     }
 
     private void OnCollisionEnter2D(Collision2D other)
