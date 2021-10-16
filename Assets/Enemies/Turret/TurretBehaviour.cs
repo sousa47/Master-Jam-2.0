@@ -5,6 +5,9 @@ using UnityEngine;
 public class TurretBehaviour : MonoBehaviour, Vision.ITrigger
 {
     public int health = 7;
+    public int damage = 1;
+    public float minShootTime = 1f;
+    public float maxShootTime = 3.5f;
 
     public Animator bodyAnimator;
     public Vision vision;
@@ -16,12 +19,21 @@ public class TurretBehaviour : MonoBehaviour, Vision.ITrigger
     float nextShootTime;
     public Transform firePoint;
     public GameObject bulletPrefab;
+    public EnemyBullet enemyBullet;
 
     // Start is called before the first frame update
     void Start()
     {
-        RestartShoot();
         this.player = GameObject.FindWithTag("Player");
+        int pos = (int)player.transform.position.x;
+        health = 1 + pos / 15;
+        damage = 1 + pos / 50;
+        minShootTime = 0.6f + (0.4f / pos);
+        maxShootTime = 1.5f + (2.0f / pos);
+
+        enemyBullet = bulletPrefab.GetComponent<EnemyBullet>();
+        enemyBullet.damage = this.damage;
+        RestartShoot();
         this.rb = this.GetComponent<Rigidbody2D>();
         this.vision.iTrigger = this;
     }

@@ -5,6 +5,9 @@ using UnityEngine;
 public class RobotBehaviour : MonoBehaviour, Vision.ITrigger
 {
     public int health = 7;
+    public int damage = 4;
+    public float minShootTime = 1f;
+    public float maxShootTime = 3.5f;
 
     public Animator bodyAnimator;
     public Vision vision;
@@ -16,12 +19,21 @@ public class RobotBehaviour : MonoBehaviour, Vision.ITrigger
     float nextShootTime;
     public Transform firePoint;
     public GameObject bulletPrefab;
+    public EnemyBullet enemyBullet;
 
     // Start is called before the first frame update
     void Start()
     {
-        RestartShoot();
         this.player = GameObject.FindWithTag("Player");
+        int pos = (int)player.transform.position.x;
+        health = 5 + pos / 10;
+        damage = 2 + pos / 40;
+        minShootTime = 0.2f + (0.8f / pos);
+        maxShootTime = 0.5f + (3.0f / pos);
+
+        enemyBullet = bulletPrefab.GetComponent<EnemyBullet>();
+        enemyBullet.damage = this.damage;
+        RestartShoot();
         this.rb = this.GetComponent<Rigidbody2D>();
         this.vision.iTrigger = this;
     }
@@ -77,7 +89,7 @@ public class RobotBehaviour : MonoBehaviour, Vision.ITrigger
         {
             bodyAnimator.SetTrigger("Die");
             bodyAnimator.SetBool("Dead", true);
-            rb.bodyType = RigidbodyType2D.Static;
+            //rb.bodyType = RigidbodyType2D.Static;
         }
     }
     void Vision.ITrigger._OnTriggerEnter2D(Collider2D other)

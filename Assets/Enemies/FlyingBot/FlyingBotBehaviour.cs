@@ -5,6 +5,9 @@ using UnityEngine;
 public class FlyingBotBehaviour : MonoBehaviour, Vision.ITrigger
 {
     public int health = 7;
+    public int damage = 2;
+    public float minShootTime = 1f;
+    public float maxShootTime = 3.5f;
 
     public Animator bodyAnimator;
     public Vision vision;
@@ -16,12 +19,22 @@ public class FlyingBotBehaviour : MonoBehaviour, Vision.ITrigger
     float nextShootTime;
     public Transform firePoint;
     public GameObject bulletPrefab;
+    public EnemyBullet enemyBullet;
+
 
     // Start is called before the first frame update
     void Start()
     {
-        RestartShoot();
         this.player = GameObject.FindWithTag("Player");
+        int pos = (int)player.transform.position.x;
+        health = 2 + pos / 14;
+        damage = 1 + pos / 40;
+        minShootTime = 0.5f + (0.5f / pos);
+        maxShootTime = 1.0f + (2.5f / pos);
+
+        enemyBullet = bulletPrefab.GetComponent<EnemyBullet>();
+        enemyBullet.damage = this.damage;
+        RestartShoot();
         this.rb = this.GetComponent<Rigidbody2D>();
         this.vision.iTrigger = this;
     }
