@@ -20,11 +20,13 @@ public class FlyingBotBehaviour : MonoBehaviour, Vision.ITrigger
     public Transform firePoint;
     public GameObject bulletPrefab;
     public EnemyBullet enemyBullet;
+    public AudioSource deadSound;
 
 
     // Start is called before the first frame update
     void Start()
     {
+        this.deadSound = this.GetComponent<AudioSource>();
         this.player = GameObject.FindWithTag("Player");
         int pos = (int)player.transform.position.x;
         health = 2 + pos / 14;
@@ -86,6 +88,7 @@ public class FlyingBotBehaviour : MonoBehaviour, Vision.ITrigger
         }
         else 
         {
+            deadSound.Play();
             bodyAnimator.SetTrigger("Die");
             rb.bodyType = RigidbodyType2D.Static;
         }

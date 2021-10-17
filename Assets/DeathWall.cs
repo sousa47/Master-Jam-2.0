@@ -29,8 +29,13 @@ public class DeathWall : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            // lose game
-            print("GAME OVER");
+            GameController gameController = collision.gameObject.GetComponent<GameController>();
+            gameController.GameOver();
+        }
+        if (collision.CompareTag("Enemy"))
+        {
+            Destroy(collision.gameObject);
         }
     }
+
 }

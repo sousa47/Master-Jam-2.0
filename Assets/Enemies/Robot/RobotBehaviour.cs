@@ -20,10 +20,12 @@ public class RobotBehaviour : MonoBehaviour, Vision.ITrigger
     public Transform firePoint;
     public GameObject bulletPrefab;
     public EnemyBullet enemyBullet;
+    public AudioSource deadSound;
 
     // Start is called before the first frame update
     void Start()
     {
+        this.deadSound = this.GetComponent<AudioSource>();
         this.player = GameObject.FindWithTag("Player");
         int pos = (int)player.transform.position.x;
         health = 5 + pos / 10;
@@ -87,6 +89,7 @@ public class RobotBehaviour : MonoBehaviour, Vision.ITrigger
         }
         else 
         {
+            deadSound.Play();
             bodyAnimator.SetTrigger("Die");
             bodyAnimator.SetBool("Dead", true);
             //rb.bodyType = RigidbodyType2D.Static;

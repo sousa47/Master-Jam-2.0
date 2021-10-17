@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
@@ -21,9 +22,12 @@ public class GameController : MonoBehaviour
     public int life = 100;
     public int bestScore = 0;
     public bool started = false;
+    public bool finished = false;
     public bool paused = false;
 
     public AudioSource takeDamage;
+    public AudioSource gameOver;
+    public AudioSource click;
     public Animator playerAnimator;
 
     public GameObject canvasPause;
@@ -145,6 +149,7 @@ public class GameController : MonoBehaviour
 
     public void Play() 
     {
+        click.Play();
         buttonGun1.SetActive(false);
         buttonGun2.SetActive(false);
         Time.timeScale = 1;
@@ -154,6 +159,7 @@ public class GameController : MonoBehaviour
     }
     public void Settings() 
     {
+        click.Play();
         Debug.Log("sss");
         button1.SetActive(false);
         button2.SetActive(false);
@@ -164,10 +170,12 @@ public class GameController : MonoBehaviour
     }
     public void Exit() 
     {
+        click.Play();
         Application.Quit();
     }
     public void Gun1() 
     {
+        click.Play();
         playerAnimator.SetInteger("gun", 1);
         gun1.SetActive(true);
         gun2.SetActive(false);
@@ -179,6 +187,7 @@ public class GameController : MonoBehaviour
     }
     public void Gun2() 
     {
+        click.Play();
         playerAnimator.SetInteger("gun", 2);
         gun1.SetActive(false);
         gun2.SetActive(true);
@@ -187,5 +196,18 @@ public class GameController : MonoBehaviour
         button3.SetActive(true);
         buttonGun1.SetActive(false);
         buttonGun2.SetActive(false);
+    }
+
+    public void GameOver() {
+        finished = true;
+        gameOver.Play();
+        gun1.SetActive(false);
+        gun2.SetActive(false);
+        Invoke("RestartLevel", 3f);
+    }
+
+    public void RestartLevel()
+    {
+        SceneManager.LoadScene("SampleScene");
     }
 }

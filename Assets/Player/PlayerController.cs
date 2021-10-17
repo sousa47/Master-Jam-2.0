@@ -32,6 +32,7 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb;
 
     private Animator animator;
+    public GameController gameController;
 
     private void Start()
     {
@@ -41,6 +42,11 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
+        if(gameController.finished) {
+            directionalInputs = 0;
+            return;
+        }
+
         if (Input.GetButtonDown("Jump")) requestJump = requestDash = true;
         pressingJump = Input.GetButton("Jump");
 
