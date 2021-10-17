@@ -20,8 +20,11 @@ public class EnemyBullet : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D other)
     {
         //Debug.Log(other.gameObject.name);
-        if(other.gameObject.tag == "Player") {
+        if(other.gameObject.tag == "Player") 
+        {
             //damage
+            GameController gameController = other.gameObject.GetComponent<GameController>();
+            gameController.TakeDamage((int)Mathf.Floor(damage));
         }
         rb.velocity = Vector2.zero;
         animator.SetTrigger("Explode");

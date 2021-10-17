@@ -1,0 +1,396 @@
+fileFormatVersion: 2
+guid: e71c0618ae0a4194ab6ed6a2025a7220
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6424384868932720225
+    second: Sawed-off_shotgun-Sheet_0
+  - first:
+      213: 2118818195210127745
+    second: Sawed-off_shotgun-Sheet_1
+  - first:
+      213: 6829227232715641755
+    second: Sawed-off_shotgun-Sheet_2
+  - first:
+      213: 6430866632655159183
+    second: Sawed-off_shotgun-Sheet_3
+  - first:
+      213: -3546385130711722487
+    second: Sawed-off_shotgun-Sheet_4
+  - first:
+      213: -1992885022397081880
+    second: Sawed-off_shotgun-Sheet_5
+  - first:
+      213: 61487243852997687
+    second: Sawed-off_shotgun-Sheet_6
+  - first:
+      213: 3681736051242215685
+    second: Sawed-off_shotgun-Sheet_7
+  - first:
+      213: -2056998962621968323
+    second: Sawed-off_shotgun-Sheet_8
+  - first:
+      213: 2086353907566651317
+    second: Sawed-off_shotgun-Sheet_9
+  - first:
+      213: 6334231137577457377
+    second: Sawed-off_shotgun-Sheet_10
+  - first:
+      213: -579336712073753445
+    second: Sawed-off_shotgun-Sheet_11
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 24
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Sawed-off_shotgun-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 550
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 166112d1000082950800000000000000
+      internalID: 6424384868932720225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sawed-off_shotgun-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 0
+        width: 550
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 189422d2ced876d10800000000000000
+      internalID: 2118818195210127745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sawed-off_shotgun-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 1100
+        y: 0
+        width: 550
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9390704cf946ce50800000000000000
+      internalID: 6829227232715641755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sawed-off_shotgun-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 1650
+        y: 0
+        width: 550
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8fb25551270f3950800000000000000
+      internalID: 6430866632655159183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sawed-off_shotgun-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 2200
+        y: 0
+        width: 550
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 906533f5385b8cec0800000000000000
+      internalID: -3546385130711722487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sawed-off_shotgun-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 2750
+        y: 0
+        width: 550
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e653d181a9d754e0800000000000000
+      internalID: -1992885022397081880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sawed-off_shotgun-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 3300
+        y: 0
+        width: 550
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 734631092527ad000800000000000000
+      internalID: 61487243852997687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sawed-off_shotgun-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 3850
+        y: 0
+        width: 550
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 509aa039e67281330800000000000000
+      internalID: 3681736051242215685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sawed-off_shotgun-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 4400
+        y: 0
+        width: 550
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d30129987521473e0800000000000000
+      internalID: -2056998962621968323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sawed-off_shotgun-Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 4950
+        y: 0
+        width: 550
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b7224033d734fc10800000000000000
+      internalID: 2086353907566651317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sawed-off_shotgun-Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 5500
+        y: 0
+        width: 550
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e6d580d8a5b7e750800000000000000
+      internalID: 6334231137577457377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sawed-off_shotgun-Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 6050
+        y: 0
+        width: 550
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9c408f6458c5f7f0800000000000000
+      internalID: -579336712073753445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
