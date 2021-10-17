@@ -1,31 +1,31 @@
 fileFormatVersion: 2
-guid: e51ee3fb3d0349f42b4778894634d7b0
+guid: 99e1c1923f089334eaec07e91d5f5635
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 379615901077400825
-    second: character_gunning_animation-Sheet_0
+      213: -5567635633204925715
+    second: pistol_1_gif-export-Sheet_0
   - first:
-      213: 2122437607520439599
-    second: character_gunning_animation-Sheet_1
+      213: 7502238326328826919
+    second: pistol_1_gif-export-Sheet_1
   - first:
-      213: 6241160270500110832
-    second: character_gunning_animation-Sheet_2
+      213: -3379962358715411485
+    second: pistol_1_gif-export-Sheet_2
   - first:
-      213: 9129250896816991451
-    second: character_gunning_animation-Sheet_3
+      213: 3397744482418373664
+    second: pistol_1_gif-export-Sheet_3
   - first:
-      213: 8769841491957693384
-    second: character_gunning_animation-Sheet_4
+      213: 6805363154776518301
+    second: pistol_1_gif-export-Sheet_4
   - first:
-      213: -8351982858218871403
-    second: character_gunning_animation-Sheet_5
+      213: 5268047538268515374
+    second: pistol_1_gif-export-Sheet_5
   - first:
-      213: -8462851260607494360
-    second: character_gunning_animation-Sheet_6
+      213: 5535566564079566792
+    second: pistol_1_gif-export-Sheet_6
   - first:
-      213: 7446422359272285325
-    second: character_gunning_animation-Sheet_7
+      213: -5068397430105810007
+    second: pistol_1_gif-export-Sheet_7
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -115,13 +115,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: character_gunning_animation-Sheet_0
+      name: pistol_1_gif-export-Sheet_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 135
-        height: 120
+        width: 120
+        height: 66
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -129,20 +129,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9fceec696aaa44500800000000000000
-      internalID: 379615901077400825
+      spriteID: dea6304e3e8cbb2b0800000000000000
+      internalID: -5567635633204925715
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: character_gunning_animation-Sheet_1
+      name: pistol_1_gif-export-Sheet_1
       rect:
         serializedVersion: 2
-        x: 135
+        x: 120
         y: 0
-        width: 135
-        height: 120
+        width: 120
+        height: 66
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -150,20 +150,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f2d8f2642c9647d10800000000000000
-      internalID: 2122437607520439599
+      spriteID: 72c962d520e4d1860800000000000000
+      internalID: 7502238326328826919
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: character_gunning_animation-Sheet_2
+      name: pistol_1_gif-export-Sheet_2
       rect:
         serializedVersion: 2
-        x: 270
+        x: 240
         y: 0
-        width: 135
-        height: 120
+        width: 120
+        height: 66
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -171,20 +171,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0f1a07de23e0d9650800000000000000
-      internalID: 6241160270500110832
+      spriteID: 3e3939e7426f711d0800000000000000
+      internalID: -3379962358715411485
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: character_gunning_animation-Sheet_3
+      name: pistol_1_gif-export-Sheet_3
       rect:
         serializedVersion: 2
-        x: 405
+        x: 360
         y: 0
-        width: 135
-        height: 120
+        width: 120
+        height: 66
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -192,20 +192,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bdc6132625d91be70800000000000000
-      internalID: 9129250896816991451
+      spriteID: 0243710da96372f20800000000000000
+      internalID: 3397744482418373664
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: character_gunning_animation-Sheet_4
+      name: pistol_1_gif-export-Sheet_4
       rect:
         serializedVersion: 2
-        x: 540
+        x: 480
         y: 0
-        width: 135
-        height: 120
+        width: 120
+        height: 66
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -213,20 +213,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8cbbe905f5cb4b970800000000000000
-      internalID: 8769841491957693384
+      spriteID: d9e6cff9bb1817e50800000000000000
+      internalID: 6805363154776518301
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: character_gunning_animation-Sheet_5
+      name: pistol_1_gif-export-Sheet_5
       rect:
         serializedVersion: 2
-        x: 675
+        x: 600
         y: 0
-        width: 135
-        height: 120
+        width: 120
+        height: 66
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -234,20 +234,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 59566b557dbc71c80800000000000000
-      internalID: -8351982858218871403
+      spriteID: e2cad52235ddb1940800000000000000
+      internalID: 5268047538268515374
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: character_gunning_animation-Sheet_6
+      name: pistol_1_gif-export-Sheet_6
       rect:
         serializedVersion: 2
-        x: 810
+        x: 720
         y: 0
-        width: 135
-        height: 120
+        width: 120
+        height: 66
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -255,20 +255,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8270688dd99ed8a80800000000000000
-      internalID: -8462851260607494360
+      spriteID: 8cffd7a167842dc40800000000000000
+      internalID: 5535566564079566792
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: character_gunning_animation-Sheet_7
+      name: pistol_1_gif-export-Sheet_7
       rect:
         serializedVersion: 2
-        x: 945
+        x: 840
         y: 0
-        width: 135
-        height: 120
+        width: 120
+        height: 66
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -276,8 +276,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d8463f3dea1075760800000000000000
-      internalID: 7446422359272285325
+      spriteID: 9ab5a0e046f69a9b0800000000000000
+      internalID: -5068397430105810007
       vertices: []
       indices: 
       edges: []
