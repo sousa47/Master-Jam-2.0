@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Upgrade : MonoBehaviour
 {
+    public string description;
+    public GameObject popupText;
+
     [Header("Player Upgrades")]
     public float movementSpeed;
     public float jumpForce;
@@ -24,6 +27,7 @@ public class Upgrade : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             UpgradePlayer(collision.GetComponent<PlayerController>(), collision.GetComponent<ShootingController>());
+            Instantiate(popupText, transform.position, Quaternion.identity).GetComponent<TextMesh>().text = description;
             Destroy(gameObject);
         }
     }
@@ -40,7 +44,7 @@ public class Upgrade : MonoBehaviour
         sc.bulletSpeed += bulletSpeed;
         if (piercingShots) sc.piercingShots = true;
         sc.bulletBounces += bulletBounces;
-        sc.bulletsPerShot = bulletsPerShot;
+        sc.bulletsPerShot += bulletsPerShot;
 
         // Melee weapon upgrades
 
