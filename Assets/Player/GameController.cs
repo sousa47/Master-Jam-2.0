@@ -86,7 +86,7 @@ public class GameController : MonoBehaviour
 
         if(life < 0) 
         {
-            //die;
+            GameOver();
             heartImage1.sprite  = empty.sprite;
             heartImage2.sprite  = empty.sprite;
             heartImage3.sprite  = empty.sprite;
